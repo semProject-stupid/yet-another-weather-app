@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Yet Another Weather App</title>
+    <link rel="icon" href="images/favicon.png">
+    <style>
+        /* Change autocomplete styles in WebKit , from community.weweb.io*/
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            border: none;
+            -webkit-text-fill-color: #e8eaed;
+            -webkit-box-shadow: 0 0 0px 1000px #4d5156 inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        ;
+    </style>
+</head>
+
+<body class="flex-rule">
+    <div id="main-div" class="flex-rule">
+        <div id="search-div">
+            <input type="text" placeholder="Arctic" id="location">
+            <div id="button-container">
+                <button id="cancel">✖</button>
+                <button id="search">🔍︎</button>
+            </div>
+        </div>
+        <div id="landing-div">
+            <p>Yet Another Weather App</p>
+            <p>Enter a location to find out the <span>current</span> temperature, humidity, precipitation, windspeed and weather
+                conditions </p>
+            <p> as well as forecast for the <span>upcoming week</span>.</p>
+            <p><a href="https://github.com/kkJawaid"><mark>Made with love :)</mark></a></p>
+        </div>
+        <div id="invalid-div">Location Not Found :(</div>
+        <div id="results-div">
+            <div id="results-text">
+                <div>Results for </div>
+                <div id="location-name"></div>
+            </div>
+            <div id="results-link">Choose Area</div>
+        </div>
+        <div id="all-info">
+            <div id="left-div">
+                <div id="temp-info">
+                    <img alt="Weather Icon" src="" class="weather-icon-img" id="weather-icon">
+                    <div id="temperature"></div>
+                    <div id="temp-buttons">
+                        <button id="celsius">°C</button>
+                        <button id="fahren">°F</button>
+                    </div>
+                </div>
+                <div id="current-info">
+                    <div id="precipitation"></div>
+                    <div id="humidity"></div>
+                    <div id="wind"></div>
+                </div>
+            </div>
+            <div id="right-div">
+                <div id="misc-info">
+                    <div id="misc-info-heading">Weather</div>
+                    <div id="day"></div>
+                    <div id="weather-desc"></div>
+                </div>
+            </div>
+        </div>
+        <div id="chart-wrapper">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div id="week-info"></div>
+    </div>
+</body>
+
+</html>

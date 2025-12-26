@@ -1,0 +1,359 @@
+@font-face {
+    font-family: GoogleSans;
+    src: url("./fonts/GoogleSans-VariableFont_GRAD\,opsz\,wght.ttf");
+}
+
+html {
+    font-size: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.flex-rule {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    background-color: #1f1f1f;
+    color: #e8eaed;
+}
+
+#main-div {
+    gap: 10px;
+}
+
+#search-div {
+    /* border: 5px solid blue; */
+    border-radius: 20px;
+    background-color: #4d5156;
+    padding: 10px;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 60%;
+    margin-top: 10%;
+}
+
+#location {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px;
+    color: #e8eaed;
+    font-size: 0.8rem;
+    width: 90%;
+}
+
+#location:focus {
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid #e8eaed;
+}
+
+#location:visited {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#button-container {
+    /* border: 2px solid red; */
+    display: flex;
+    gap: 20px;
+}
+
+#search-div button {
+    background: transparent;
+    border: none;
+    color: #e8eaed;
+    font-size: 0.7rem;
+}
+
+#results-div {
+    /* border: 5px solid purple; */
+    display: flex;
+    font-size: 0.6rem;
+    font-family: Helvetica, sans-serif;
+    gap: 6px;
+    width: 60%;
+
+    display: none;
+}
+
+#results-text {
+    display: inline-flex;
+    gap: 5px;
+}
+
+#results-link {
+    margin-top: 2.2px;
+    font-size: 0.5rem;
+    color: #5c92d8;
+}
+
+#all-info {
+    /* border: 5px solid yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10%; */
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 20px;
+
+    display: none;
+}
+
+#left-div {
+    /* border: 5px solid orange; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    height: max-content;
+
+}
+
+/* #right-div {
+    border: 5px solid purple;
+} */
+
+#temp-info {
+    /* border: 5px solid pink; */
+    display: flex;
+    gap: 20px;
+    font-family: GoogleSans, 'serif';
+    /* height: max-content; */
+}
+
+#temperature {
+    font-size: 1.8rem;
+}
+
+#temp-buttons {
+    /* border: 5px solid green; */
+    flex-direction: row;
+    align-items: top;
+    height: fit-content;
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#temp-buttons button {
+    background: transparent;
+    /* background-color: #1f1f1fd7; */
+    border: none;
+    color: #e8eaed5d;
+    padding: 5px;
+    text-align: left;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+#temp-buttons #celsius {
+    padding-right: 10px;
+    border-right: 2px solid #e8eaed5d;
+}
+
+#temp-buttons #fahren {
+    color: #e8eaed;
+}
+
+#current-info {
+    /* border: 5px solid brown; */
+    /* width: 150px; */
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-top: 3px;
+    font-size: 0.5rem;
+    font-family: Helvetica, sans-serif;
+    color: #e8eaedd0;
+    margin-left: 5px;
+}
+
+#misc-info {
+    /* border: 5px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 5px;
+}
+
+#misc-info-heading {
+    font-family: GoogleSans, 'serif';
+}
+
+#day,
+#weather-desc {
+    font-family: Helvetica, sans-serif;
+    color: #e8eaedd0;
+}
+
+#day {
+    font-size: 0.8rem;
+}
+
+#weather-desc {
+    font-size: 0.6rem;
+    line-height: 1.2;
+}
+
+#chart-wrapper {
+    width: 60%;
+    max-width: 60%;
+    height: 300px;
+    max-height: 300px;
+}
+
+#myChart {
+    /* border: 5px solid green; */
+    width: 100% !important;
+    height: 100% !important;
+
+    display: none;
+}
+
+#week-info {
+    /* border: 5px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    /* width: 80%; */
+    margin-top: 12px;
+
+    display: none;
+}
+
+.week-div {
+    /* border: 5px solid green; */
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    font-family: GoogleSans, 'serif';
+    width: 90px;
+    padding: 10px;
+    /* max-width: fit-content; */
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    font-size: 0.8rem;
+}
+
+.clicked-bg {
+    border-radius: 10px;
+
+}
+
+.day-name {
+    font-size: 1.2em;
+}
+
+.day-temp {
+    font-size: 0.7em;
+}
+
+/* 
+make current-info bigger on bigger screesn (Font size) */
+
+@media (max-width: 830px) {
+    #week-info {
+        justify-content: flex-start;
+    }
+
+    #all-info {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 500px) {
+    #temp-info {
+        flex-wrap: wrap;
+        padding-left: 5px;
+    }
+
+    #temp-buttons {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 270px) {
+    #week-info {
+        justify-content: center;
+        align-items: center;
+    }
+
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 240px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 210px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+.weather-icon-img {
+    /* border: 3px solid blue; */
+    margin-right: 5px;
+    width: 80px;
+    height: auto;
+}
+
+#landing-div, #invalid-div {
+    font-family: GoogleSans, 'serif';
+    margin: 30px 5px 5px 15px;
+    line-height: 1.7;
+    font-size: 0.8rem;
+    word-spacing: 1.2;
+}
+#landing-div p:nth-child(1), #invalid-div {
+    font-size: 1.7rem;
+}
+#landing-div p:nth-child(4) {
+    margin-top: 10px;
+}
+span {
+    text-decoration: underline;
+}
+a {
+    text-decoration: none;
+    color: #e4e2f7;
+}
+a:visited {
+    color: #e4e2f7;
+}
+mark {
+    color: #e8eaed;
+    background-color: #365b8b;
+    padding: 5px;
+}
+#invalid-div {
+    display: none;
+}
+
+.week-div:hover, #temp-buttons button:hover, #results-link:hover, #search-div button:hover{
+    cursor:pointer;
+}
